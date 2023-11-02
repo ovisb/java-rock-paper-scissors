@@ -24,13 +24,24 @@ Rock Paper Scissors CLI game application.
 - Read option from user
 - Choose a random option for the computer
 - Print winner
+- completed stage 2
 
 02.11.2023
 - Started stage 3
 - refactored choices into enum, easier to find who won
 - added main game loop
 - added input validations
+- completed stage 3
+
+02.11.2023
+- started stage 4
+- Now program will ask player for a name and it will keep a score
+- Create user class with a default score of 0
+- Program will look for a file called `rating.txt` and will read user score from that file.
+- If player name does not exist in the file, player will start with default user object score of 0.
+- some refactoring done to make some of the code more clean
+- completed stage 4
 
 ## Project status
 
-Completed 3/6 stages
+Completed 4/5 stages
