@@ -25,6 +25,12 @@ Rock Paper Scissors CLI game application.
 - Choose a random option for the computer
 - Print winner
 
+02.11.2023
+- Started stage 3
+- refactored choices into enum, easier to find who won
+- added main game loop
+- added input validations
+
 ## Project status
 
-Completed 2/6 stages
+Completed 3/6 stages

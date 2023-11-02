@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 class RockPaperScissors {
     private final Scanner scanner = new Scanner(System.in);
-
-    private final String[] COMP_CHOICES = {"rock", "paper", "scissors"};
-
     private final Random random = new Random();
     private String getInput() {
         return scanner.next();
@@ -15,33 +12,36 @@ class RockPaperScissors {
 
     private boolean isInputValid(String userInput) {
         boolean isValid = false;
-        for (String choice: COMP_CHOICES) {
-            if (choice.equals(userInput)) {
-                isValid = true;
-                break;
+
+        try {
+            GameChoices userChoice = GameChoices.valueOf(userInput.toUpperCase());
+
+            for (GameChoices enumChoice: GameChoices.values()) {
+                if (enumChoice == userChoice ) {
+                    isValid = true;
+                    break;
+                }
             }
+        } catch (IllegalArgumentException ignored) {
         }
+
         return isValid;
     }
 
-    private String findWhoBeatsChoice(String choice) {
-        String winner;
-        if (choice.equals("rock")) {
-            winner = "paper";
-        } else if (choice.equals("paper")) {
-            winner = "scissors";
-        } else {
-            winner = "rock";
-        }
-        return winner;
+    private String findWhoBeatsChoice(GameChoices choice) {
+        return choice.getLosesAgainst();
     }
 
     private void checkWinner(String userInput) {
-        int randomInt = random.nextInt(COMP_CHOICES.length);
+        GameChoices[] availableChoices = GameChoices.values();
+        int randomInt = random.nextInt(availableChoices.length);
+        String computerChoice = availableChoices[randomInt].name().toLowerCase();
 
-        String computerChoice = COMP_CHOICES[randomInt];
-        String whoBeatsUser = findWhoBeatsChoice(userInput);
-        String whoBeatsComp = findWhoBeatsChoice(computerChoice);
+        GameChoices userChoice = GameChoices.valueOf(userInput.toUpperCase());
+        GameChoices compChoice = GameChoices.valueOf(computerChoice.toUpperCase());
+
+        String whoBeatsUser = findWhoBeatsChoice(userChoice);
+        String whoBeatsComp = findWhoBeatsChoice(compChoice);
 
         if (userInput.equals(whoBeatsComp)) {
             System.out.printf("Well done. The computer chose %s and failed%n", computerChoice);
