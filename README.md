@@ -10,15 +10,21 @@ Purpose of the project is to learn Java OOP basics and to get more familiar with
 - Java 17
 
 ## Project description
-Coffee machine CLI application.
+Rock Paper Scissors CLI game application.
 
 ## Changelog
 02.11.2023
 - Create git repo
+- Started stage 1
 - Take input from the user and ensure that (for now) computer always wins.
 
-
+02.11.2023
+- Started stage 2
+- refactored rock paper scissors to separate class to use more OOP
+- Read option from user
+- Choose a random option for the computer
+- Print winner
 
 ## Project status
 
-Completed 1/6 stages
+Completed 2/6 stages
