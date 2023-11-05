@@ -44,7 +44,7 @@ Rock Paper Scissors CLI game application.
 
 05.11.2023
 - Had to refactor most of the code as the requirements have shifted drastically 
-- The winner / loser will be determinted based on an initial array of options, where the first half will beat the users option and the second one will lose to it
+- The winner / loser will be determined based on an initial array of options, where the first half will beat the users option and the second one will lose to it
 - Implemented above winner/loser algo
 - Completed stage 5
 
