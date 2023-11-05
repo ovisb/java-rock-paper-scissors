@@ -12,6 +12,14 @@ Purpose of the project is to learn Java OOP basics and to get more familiar with
 ## Project description
 Rock Paper Scissors CLI game application.
 
+How to play:
+- Input user name
+- input the options e.g `rock,gun,lightning,devil,dragon,water,air,paper,sponge,wolf,tree,human,snake,scissors,fire`
+- Input any of the above options to start playing
+- press `!exit` to quit game or `!rating` to see current score
+- You get 100 points for win and 50 points for draw
+- Have fun!
+
 ## Changelog
 02.11.2023
 - Create git repo
